@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LPSettingsWindowController">
+            <connections>
+                <outlet property="addToBlacklistShortcut" destination="KqD-fn-cHm" id="V5A-Oh-ttv"/>
+                <outlet property="addToBlacklistShortcutEnabled" destination="py8-hW-zIm" id="fl2-83-OiS"/>
+                <outlet property="autoOSXThemeEnabled" destination="r73-L4-b1F" id="fRA-uE-SMG"/>
+                <outlet property="changeAllWallpapersShortcut" destination="VLZ-s8-dwK" id="YNI-sG-5pl"/>
+                <outlet property="changeAllWallpapersShortcutEnabled" destination="D40-gh-upH" id="DMW-nZ-dY8"/>
+                <outlet property="nextWallpaperShortcut" destination="Xkb-3G-9kb" id="nU0-Ta-DBV"/>
+                <outlet property="nextWallpaperShortcutEnabled" destination="6Nb-mh-Z7Q" id="cMk-1R-yTO"/>
+                <outlet property="notificationsEnabled" destination="KeI-4X-pXj" id="Mbq-Gy-GE4"/>
+                <outlet property="openSavedImageEnabled" destination="7Mn-ZE-WCz" id="V8E-i8-7dt"/>
+                <outlet property="preferredOrientation" destination="mnz-aP-FHb" id="AN4-Bw-q42"/>
+                <outlet property="recentWallpaperShortcut" destination="lxz-U2-IyR" id="eUB-dy-jPp"/>
+                <outlet property="recentWallpaperShortcutEnabled" destination="Zh2-vw-HTB" id="VfJ-qt-r4W"/>
+                <outlet property="saveCurrentWallpaperShortcut" destination="8Ht-fb-gXW" id="TKk-rW-4lV"/>
+                <outlet property="saveCurrentWallpaperShortcutEnabled" destination="k5C-rW-u5F" id="A3M-ss-ZYt"/>
+                <outlet property="updateScope" destination="Abc-0g-Id1" id="vBG-Hu-Xan"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="documentWindow" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="434" height="349"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="800"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="-5" width="434" height="349"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4vz-Yw-a4N">
+                        <rect key="frame" x="89" y="312" width="120" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Change wallpaper:" id="zTB-Yt-lXr">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Xkb-3G-9kb" customClass="MASShortcutView">
+                        <rect key="frame" x="215" y="311" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="R24-Yy-VKG"/>
+                            <constraint firstAttribute="height" constant="20" id="fqq-bx-3LB"/>
+                        </constraints>
+                    </customView>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="6Nb-mh-Z7Q">
+                        <rect key="frame" x="371" y="312" width="22" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="7xK-x8-GhO"/>
+                            <constraint firstAttribute="height" constant="14" id="TOu-IG-hWJ"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="hCy-Jh-fLV">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleNextWallpaperShortcut:" target="-2" id="tZ9-cm-uzk"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XoM-MG-NIs">
+                        <rect key="frame" x="65" y="287" width="144" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Change all wallpapers:" id="PVb-Ov-zqm">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="VLZ-s8-dwK" customClass="MASShortcutView">
+                        <rect key="frame" x="215" y="286" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="T26-dS-OOn"/>
+                            <constraint firstAttribute="height" constant="20" id="wQ2-Xf-Vny"/>
+                        </constraints>
+                    </customView>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="D40-gh-upH">
+                        <rect key="frame" x="371" y="287" width="22" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="k20-Sc-V8P"/>
+                            <constraint firstAttribute="width" constant="18" id="yTO-Dw-iTE"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1qu-fW-uBz">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleChangeAllWallpapersShortcut:" target="-2" id="Axa-pL-2iI"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hUq-ml-73q">
+                        <rect key="frame" x="41" y="262" width="168" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Add wallpaper to blacklist:" id="PsU-7t-9EY">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="KqD-fn-cHm" customClass="MASShortcutView">
+                        <rect key="frame" x="215" y="261" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1i2-GJ-axO"/>
+                            <constraint firstAttribute="width" constant="150" id="2ns-sd-5II"/>
+                        </constraints>
+                    </customView>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="py8-hW-zIm">
+                        <rect key="frame" x="371" y="262" width="22" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="08b-2h-jgm"/>
+                            <constraint firstAttribute="height" constant="14" id="AZM-33-sdA"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="aHT-fQ-ecv">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleBlacklistShortcut:" target="-2" id="p14-fy-jDc"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I3k-v7-CKk">
+                        <rect key="frame" x="95" y="235" width="114" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="First in collection:" id="Trh-1v-1xe">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="lxz-U2-IyR" customClass="MASShortcutView">
+                        <rect key="frame" x="215" y="234" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="1dk-H1-5sk"/>
+                            <constraint firstAttribute="height" constant="20" id="vrI-44-r9t"/>
+                        </constraints>
+                    </customView>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Zh2-vw-HTB">
+                        <rect key="frame" x="371" y="235" width="22" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="BHk-fy-KZ4"/>
+                            <constraint firstAttribute="height" constant="14" id="nDt-6U-W3X"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JKz-FG-kVY">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleRecentWallpaperShortcut:" target="-2" id="XO4-N7-t3I"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xnb-N3-Bx1">
+                        <rect key="frame" x="59" y="208" width="150" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Save current wallpaper:" id="1Il-iX-QiJ">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="8Ht-fb-gXW" customClass="MASShortcutView">
+                        <rect key="frame" x="215" y="207" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="5O1-Lw-j0C"/>
+                            <constraint firstAttribute="height" constant="20" id="FzJ-Ko-njK"/>
+                        </constraints>
+                    </customView>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="k5C-rW-u5F">
+                        <rect key="frame" x="371" y="208" width="22" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="McG-ZJ-BYJ"/>
+                            <constraint firstAttribute="height" constant="14" id="kH4-y7-I7E"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="wkF-8A-tgy">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleSaveCurrentWallpaperShortcut:" target="-2" id="FNP-o7-xeP"/>
+                        </connections>
+                    </button>
+                    <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-Ee-NuZ">
+                        <rect key="frame" x="12" y="187" width="408" height="5"/>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="system"/>
+                    </box>
+                    <textField toolTip="When you press &quot;Next wallpaper&quot; or &quot;Recent wallpaper&quot; image will be set for this workspaces." horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nvd-Yx-9h2">
+                        <rect key="frame" x="95" y="127" width="114" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Update image on:" id="vGt-Hz-ObR">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton toolTip="When you press &quot;Next wallpaper&quot; or &quot;Recent wallpaper&quot; image will be set for this workspaces." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Abc-0g-Id1">
+                        <rect key="frame" x="213" y="121" width="155" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="all workspaces" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rOd-tN-HNW" id="D8q-KH-bG7">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="RAF-SC-fd4">
+                                <items>
+                                    <menuItem title="all workspaces" state="on" id="rOd-tN-HNW"/>
+                                    <menuItem title="current display" id="yiF-aH-91Z"/>
+                                    <menuItem title="current workspace" id="h5F-SS-pge"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="changeUpdateScope:" target="-2" id="v6t-4X-cZt"/>
+                        </connections>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wlu-NE-d1f">
+                        <rect key="frame" x="124" y="100" width="85" height="17"/>
+                        <string key="toolTip">Photos published on Unsplash have very high resolution. That's why downloading may take a lot of time. Notification will be sent when wallpaper will be successfully set. </string>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Notifications:" id="lcW-1T-LcP">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="KeI-4X-pXj">
+                        <rect key="frame" x="213" y="99" width="73" height="18"/>
+                        <string key="toolTip">Photos published on Unsplash have very high resolution. That's why downloading may take a lot of time. Notification will be sent when wallpaper will be successfully set. </string>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="k0i-bi-Z4j"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" title="Enabled" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="UgY-t2-4IS">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleNotifications:" target="-2" id="PUL-5D-Rjx"/>
+                        </connections>
+                    </button>
+                    <textField toolTip="Open saved image in Preview app" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rmr-ap-KZZ">
+                        <rect key="frame" x="85" y="46" width="124" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Open saved image:" id="vde-QB-UdR">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField toolTip="For OS X Yosemite and newer versions. If enabled, for dark photos menu bar and Dock will turn black, for light images - white." horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-xY-XMX">
+                        <rect key="frame" x="127" y="73" width="82" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="OS X theme:" id="596-V3-epS">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button toolTip="For OS X Yosemite and newer versions. If enabled, for dark photos menu bar and Dock will turn black, for light images - white." translatesAutoresizingMaskIntoConstraints="NO" id="r73-L4-b1F">
+                        <rect key="frame" x="213" y="72" width="129" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="6Wj-jV-uIZ"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" title="Set automatically" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="w7M-Pe-4GL">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleAutoOSXTheme:" target="-2" id="3yf-gH-vos"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Usm-hI-KBk">
+                        <rect key="frame" x="92" y="19" width="117" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Launch at startup:" id="GeJ-0q-d74">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button toolTip="Open saved image in Preview app" translatesAutoresizingMaskIntoConstraints="NO" id="7Mn-ZE-WCz">
+                        <rect key="frame" x="213" y="45" width="73" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="7Pw-e8-Kb3"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" title="Enabled" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="erD-y1-vJk">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleOpenSavedImage:" target="-2" id="iHD-Ko-eDk"/>
+                        </connections>
+                    </button>
+                    <button toolTip="Open saved image in Preview app" translatesAutoresizingMaskIntoConstraints="NO" id="ph2-Sc-8AB">
+                        <rect key="frame" x="213" y="18" width="73" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="QeZ-NO-UG8"/>
+                        </constraints>
+                        <buttonCell key="cell" type="check" title="Enabled" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="L24-HY-Isv">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="toggleOpenSavedImage:" target="-2" id="zNu-VB-ZlX"/>
+                        </connections>
+                    </button>
+                    <textField toolTip="When you press &quot;Next wallpaper&quot; or &quot;Recent wallpaper&quot; image will be set for this workspaces." horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Zlv-dB-0nd">
+                        <rect key="frame" x="33" y="154" width="176" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Preferred image orientation:" id="bA8-Wz-cQT">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton toolTip="When you press &quot;Next wallpaper&quot; or &quot;Recent wallpaper&quot; image will be set for this workspaces." verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mnz-aP-FHb">
+                        <rect key="frame" x="213" y="148" width="155" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="landscape" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="7ig-Mn-VYk" id="UFi-d4-OdF">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="6lo-Zc-M7l">
+                                <items>
+                                    <menuItem title="landscape" state="on" id="7ig-Mn-VYk"/>
+                                    <menuItem title="portrait" id="Amq-8G-zeQ"/>
+                                    <menuItem title="landscape and portrait" id="dMW-zO-weq"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="changePreferredOrientation:" target="-2" id="8WL-iX-ILX"/>
+                        </connections>
+                    </popUpButton>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lxz-U2-IyR" firstAttribute="centerY" secondItem="Zh2-vw-HTB" secondAttribute="centerY" id="0nz-O1-Ya4"/>
+                    <constraint firstItem="KeI-4X-pXj" firstAttribute="leading" secondItem="Wlu-NE-d1f" secondAttribute="trailing" constant="8" id="1mk-zz-UFD"/>
+                    <constraint firstItem="XoM-MG-NIs" firstAttribute="top" secondItem="4vz-Yw-a4N" secondAttribute="bottom" constant="8" id="2tP-eF-AtM"/>
+                    <constraint firstItem="Wlu-NE-d1f" firstAttribute="trailing" secondItem="Nvd-Yx-9h2" secondAttribute="trailing" id="3jx-X8-kSX"/>
+                    <constraint firstItem="Rmr-ap-KZZ" firstAttribute="top" secondItem="3nV-xY-XMX" secondAttribute="bottom" constant="10" id="49s-pS-pSl"/>
+                    <constraint firstItem="xnb-N3-Bx1" firstAttribute="trailing" secondItem="I3k-v7-CKk" secondAttribute="trailing" id="6A5-lq-Th8"/>
+                    <constraint firstItem="xnb-N3-Bx1" firstAttribute="trailing" secondItem="4vz-Yw-a4N" secondAttribute="trailing" id="6qL-H2-6WN"/>
+                    <constraint firstItem="D40-gh-upH" firstAttribute="leading" secondItem="VLZ-s8-dwK" secondAttribute="trailing" constant="8" id="72a-Vr-CdL"/>
+                    <constraint firstItem="mnz-aP-FHb" firstAttribute="width" secondItem="8Ht-fb-gXW" secondAttribute="width" id="7Qr-Uh-853"/>
+                    <constraint firstItem="4vz-Yw-a4N" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="8Bc-Pa-oXO"/>
+                    <constraint firstItem="VLZ-s8-dwK" firstAttribute="centerY" secondItem="D40-gh-upH" secondAttribute="centerY" id="8Bv-9s-IC0"/>
+                    <constraint firstAttribute="trailing" secondItem="CdK-Ee-NuZ" secondAttribute="trailing" constant="14" id="8y3-EJ-scv"/>
+                    <constraint firstItem="CdK-Ee-NuZ" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="12" id="9O1-z4-rxv"/>
+                    <constraint firstItem="Nvd-Yx-9h2" firstAttribute="baseline" secondItem="Abc-0g-Id1" secondAttribute="baseline" id="A0s-0j-ZU0"/>
+                    <constraint firstItem="Zh2-vw-HTB" firstAttribute="leading" secondItem="lxz-U2-IyR" secondAttribute="trailing" constant="8" id="AJe-CW-bIS"/>
+                    <constraint firstItem="Xkb-3G-9kb" firstAttribute="centerY" secondItem="6Nb-mh-Z7Q" secondAttribute="centerY" id="AQO-pG-jOm"/>
+                    <constraint firstAttribute="centerX" secondItem="4vz-Yw-a4N" secondAttribute="trailing" constant="10" id="Bp3-Ge-WCD"/>
+                    <constraint firstItem="Abc-0g-Id1" firstAttribute="leading" secondItem="Nvd-Yx-9h2" secondAttribute="trailing" constant="8" id="CCI-Ch-iCm"/>
+                    <constraint firstItem="XoM-MG-NIs" firstAttribute="centerY" secondItem="VLZ-s8-dwK" secondAttribute="centerY" id="CDs-wi-utH"/>
+                    <constraint firstItem="xnb-N3-Bx1" firstAttribute="trailing" secondItem="XoM-MG-NIs" secondAttribute="trailing" id="E0D-7w-Bei"/>
+                    <constraint firstItem="Zlv-dB-0nd" firstAttribute="baseline" secondItem="mnz-aP-FHb" secondAttribute="baseline" id="G2f-Sp-Vbf"/>
+                    <constraint firstItem="Usm-hI-KBk" firstAttribute="trailing" secondItem="Rmr-ap-KZZ" secondAttribute="trailing" id="Gla-o7-eoj"/>
+                    <constraint firstItem="8Ht-fb-gXW" firstAttribute="width" secondItem="Abc-0g-Id1" secondAttribute="width" id="IGD-ne-ibN"/>
+                    <constraint firstItem="I3k-v7-CKk" firstAttribute="top" secondItem="hUq-ml-73q" secondAttribute="bottom" constant="10" id="IVP-Xp-Y5I"/>
+                    <constraint firstItem="k5C-rW-u5F" firstAttribute="leading" secondItem="8Ht-fb-gXW" secondAttribute="trailing" constant="8" id="JFi-Ov-BoM"/>
+                    <constraint firstItem="VLZ-s8-dwK" firstAttribute="leading" secondItem="XoM-MG-NIs" secondAttribute="trailing" constant="8" id="L09-ex-6d8"/>
+                    <constraint firstItem="7Mn-ZE-WCz" firstAttribute="leading" secondItem="Rmr-ap-KZZ" secondAttribute="trailing" constant="8" id="LI6-3w-LPC"/>
+                    <constraint firstItem="KeI-4X-pXj" firstAttribute="baseline" secondItem="Wlu-NE-d1f" secondAttribute="baseline" id="LKF-M8-abV"/>
+                    <constraint firstItem="KqD-fn-cHm" firstAttribute="leading" secondItem="hUq-ml-73q" secondAttribute="trailing" constant="8" id="Lc2-JH-xuD"/>
+                    <constraint firstItem="Usm-hI-KBk" firstAttribute="trailing" secondItem="3nV-xY-XMX" secondAttribute="trailing" id="MMa-jg-Txd"/>
+                    <constraint firstItem="Zlv-dB-0nd" firstAttribute="trailing" secondItem="xnb-N3-Bx1" secondAttribute="trailing" id="Ml9-P8-eEH"/>
+                    <constraint firstItem="KqD-fn-cHm" firstAttribute="centerY" secondItem="py8-hW-zIm" secondAttribute="centerY" id="Oxq-4N-ESN"/>
+                    <constraint firstItem="mnz-aP-FHb" firstAttribute="leading" secondItem="Zlv-dB-0nd" secondAttribute="trailing" constant="8" id="RIC-tf-kDZ"/>
+                    <constraint firstItem="Usm-hI-KBk" firstAttribute="top" secondItem="Rmr-ap-KZZ" secondAttribute="bottom" constant="10" id="URf-5O-jmO"/>
+                    <constraint firstItem="hUq-ml-73q" firstAttribute="top" secondItem="XoM-MG-NIs" secondAttribute="bottom" constant="8" id="Vrz-Z2-TH2"/>
+                    <constraint firstItem="I3k-v7-CKk" firstAttribute="centerY" secondItem="lxz-U2-IyR" secondAttribute="centerY" id="Ytx-L8-f3O"/>
+                    <constraint firstItem="xnb-N3-Bx1" firstAttribute="centerY" secondItem="8Ht-fb-gXW" secondAttribute="centerY" id="c22-2V-oZV"/>
+                    <constraint firstItem="ph2-Sc-8AB" firstAttribute="leading" secondItem="Usm-hI-KBk" secondAttribute="trailing" constant="8" id="cMI-3M-aPd"/>
+                    <constraint firstItem="Zlv-dB-0nd" firstAttribute="trailing" secondItem="Nvd-Yx-9h2" secondAttribute="trailing" id="cdG-Jj-Tqx"/>
+                    <constraint firstItem="7Mn-ZE-WCz" firstAttribute="baseline" secondItem="Rmr-ap-KZZ" secondAttribute="baseline" id="dKB-oo-Kao"/>
+                    <constraint firstItem="Nvd-Yx-9h2" firstAttribute="top" secondItem="Zlv-dB-0nd" secondAttribute="bottom" constant="10" id="e0u-hi-SYy"/>
+                    <constraint firstItem="r73-L4-b1F" firstAttribute="baseline" secondItem="3nV-xY-XMX" secondAttribute="baseline" id="ex2-q8-oPw"/>
+                    <constraint firstItem="Rmr-ap-KZZ" firstAttribute="trailing" secondItem="3nV-xY-XMX" secondAttribute="trailing" id="fg5-vg-yJQ"/>
+                    <constraint firstItem="Wlu-NE-d1f" firstAttribute="top" secondItem="Nvd-Yx-9h2" secondAttribute="bottom" constant="10" id="hki-b3-PKl"/>
+                    <constraint firstItem="r73-L4-b1F" firstAttribute="leading" secondItem="3nV-xY-XMX" secondAttribute="trailing" constant="8" id="hyg-aK-jsb"/>
+                    <constraint firstItem="Zlv-dB-0nd" firstAttribute="top" secondItem="CdK-Ee-NuZ" secondAttribute="bottom" constant="18" id="i9K-Oo-F8K"/>
+                    <constraint firstItem="4vz-Yw-a4N" firstAttribute="centerY" secondItem="Xkb-3G-9kb" secondAttribute="centerY" id="isD-Le-KhJ"/>
+                    <constraint firstItem="hUq-ml-73q" firstAttribute="centerY" secondItem="KqD-fn-cHm" secondAttribute="centerY" id="jk4-N4-P1X"/>
+                    <constraint firstItem="3nV-xY-XMX" firstAttribute="top" secondItem="Wlu-NE-d1f" secondAttribute="bottom" constant="10" id="l2N-Mz-F1E"/>
+                    <constraint firstItem="8Ht-fb-gXW" firstAttribute="leading" secondItem="xnb-N3-Bx1" secondAttribute="trailing" constant="8" id="nWC-Nt-DWs"/>
+                    <constraint firstItem="ph2-Sc-8AB" firstAttribute="baseline" secondItem="Usm-hI-KBk" secondAttribute="baseline" id="ngV-eM-fUd"/>
+                    <constraint firstItem="CdK-Ee-NuZ" firstAttribute="top" secondItem="xnb-N3-Bx1" secondAttribute="bottom" constant="18" id="ow1-aB-oOY"/>
+                    <constraint firstItem="k5C-rW-u5F" firstAttribute="centerY" secondItem="8Ht-fb-gXW" secondAttribute="centerY" id="qbY-Tz-dHQ"/>
+                    <constraint firstItem="Xkb-3G-9kb" firstAttribute="leading" secondItem="4vz-Yw-a4N" secondAttribute="trailing" constant="8" id="rjK-kg-fxO"/>
+                    <constraint firstItem="6Nb-mh-Z7Q" firstAttribute="leading" secondItem="Xkb-3G-9kb" secondAttribute="trailing" constant="8" id="tdY-H0-Yd4"/>
+                    <constraint firstItem="3nV-xY-XMX" firstAttribute="trailing" secondItem="Wlu-NE-d1f" secondAttribute="trailing" id="tk8-yI-Pk5"/>
+                    <constraint firstItem="py8-hW-zIm" firstAttribute="leading" secondItem="KqD-fn-cHm" secondAttribute="trailing" constant="8" id="ueQ-hR-BQD"/>
+                    <constraint firstItem="lxz-U2-IyR" firstAttribute="leading" secondItem="I3k-v7-CKk" secondAttribute="trailing" constant="8" id="vKf-F4-hRY"/>
+                    <constraint firstItem="xnb-N3-Bx1" firstAttribute="top" secondItem="I3k-v7-CKk" secondAttribute="bottom" constant="10" id="vYY-HG-qhC"/>
+                    <constraint firstItem="xnb-N3-Bx1" firstAttribute="trailing" secondItem="hUq-ml-73q" secondAttribute="trailing" id="vyT-ji-5Vq"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="253" y="359.5"/>
+        </window>
+    </objects>
+</document>

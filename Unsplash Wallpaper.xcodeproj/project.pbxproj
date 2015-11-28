@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C00A9585A0292EC74279C9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87582B5BEB2662FEEBCF4F4E /* libPods.a */; };
+		E31ED8461AC30634001535DF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31ED8451AC30634001535DF /* CoreData.framework */; };
+		E31ED8491AC3065A001535DF /* LPWallpapers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E31ED8471AC3065A001535DF /* LPWallpapers.xcdatamodeld */; };
+		E322555B1B7BF13500D47409 /* LPUnsplashWallpaper.m in Sources */ = {isa = PBXBuildFile; fileRef = E322555A1B7BF13500D47409 /* LPUnsplashWallpaper.m */; };
+		E3380C931B2318BE00775AD5 /* NSImage+Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = E3380C921B2318BE00775AD5 /* NSImage+Luminance.m */; };
+		E33FA0191B45C0BE00DA10CF /* EnumsToStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = E33FA0181B45C0BE00DA10CF /* EnumsToStrings.m */; };
+		E33FC6EA1C0A02E3008EA317 /* UnsplashConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E33FC6E91C0A01DF008EA317 /* UnsplashConstants.m */; };
+		E34E3D3D1A9B82990000C165 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E34E3D3C1A9B82990000C165 /* dsa_pub.pem */; };
+		E36EDB131AC533B1007DACEE /* LPNSImageAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E36EDB121AC533B1007DACEE /* LPNSImageAnimator.m */; };
+		E36EDBDE1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E36EDBDD1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m */; };
+		E36EDC671AC56424007DACEE /* TTOfflineChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = E36EDC661AC56424007DACEE /* TTOfflineChecker.m */; };
+		E3940A361AC30E22004802FC /* LPWallpaper.m in Sources */ = {isa = PBXBuildFile; fileRef = E3940A351AC30E22004802FC /* LPWallpaper.m */; };
+		E3940A3D1AC32254004802FC /* LPUnsplashWallpaper+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = E3940A3C1AC32254004802FC /* LPUnsplashWallpaper+Properties.m */; };
+		E3D12A311B62327C00466491 /* LPSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D12A301B62327C00466491 /* LPSettingsManager.m */; };
+		E3D12A351B62328500466491 /* LPSettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D12A331B62328500466491 /* LPSettingsWindowController.m */; };
+		E3D12A361B62328500466491 /* LPSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D12A341B62328500466491 /* LPSettingsWindowController.xib */; };
+		E3D12A401B62495800466491 /* LPAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D12A3E1B62495800466491 /* LPAboutWindowController.m */; };
+		E3D12A411B62495800466491 /* LPAboutWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D12A3F1B62495800466491 /* LPAboutWindowController.xib */; };
+		E3DBB5CA1A7CEBFD008D9C64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB5C91A7CEBFD008D9C64 /* AppDelegate.m */; };
+		E3DBB5CC1A7CEBFD008D9C64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB5CB1A7CEBFD008D9C64 /* main.m */; };
+		E3DBB5CE1A7CEBFD008D9C64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3DBB5CD1A7CEBFD008D9C64 /* Images.xcassets */; };
+		E3DBB5D11A7CEBFD008D9C64 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3DBB5CF1A7CEBFD008D9C64 /* MainMenu.xib */; };
+		E3DBB5E81A7CFD58008D9C64 /* LPUnsplashImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DBB5E71A7CFD58008D9C64 /* LPUnsplashImageManager.m */; };
+		E3FF74211B202EBF00A3725F /* LPWallpaperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FF74201B202EBF00A3725F /* LPWallpaperManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		581346AF7673975526BBA2D8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		87582B5BEB2662FEEBCF4F4E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE76CC94BBA04BC7EF281D51 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E308EC151B45795A0043E199 /* LPWallpapers 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "LPWallpapers 2.xcdatamodel"; sourceTree = "<group>"; };
+		E31ED8451AC30634001535DF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E31ED8481AC3065A001535DF /* LPWallpapers.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LPWallpapers.xcdatamodel; sourceTree = "<group>"; };
+		E32255581B7BF0B000D47409 /* LPWallpapers 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "LPWallpapers 3.xcdatamodel"; sourceTree = "<group>"; };
+		E32255591B7BF13500D47409 /* LPUnsplashWallpaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPUnsplashWallpaper.h; sourceTree = "<group>"; };
+		E322555A1B7BF13500D47409 /* LPUnsplashWallpaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPUnsplashWallpaper.m; sourceTree = "<group>"; };
+		E3380C911B2318BE00775AD5 /* NSImage+Luminance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+Luminance.h"; sourceTree = "<group>"; };
+		E3380C921B2318BE00775AD5 /* NSImage+Luminance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Luminance.m"; sourceTree = "<group>"; };
+		E33FA0171B45C0BE00DA10CF /* EnumsToStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumsToStrings.h; sourceTree = "<group>"; };
+		E33FA0181B45C0BE00DA10CF /* EnumsToStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumsToStrings.m; sourceTree = "<group>"; };
+		E33FC6E81C0A01A6008EA317 /* UnsplashConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsplashConstants.h; sourceTree = "<group>"; };
+		E33FC6E91C0A01DF008EA317 /* UnsplashConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnsplashConstants.m; sourceTree = "<group>"; };
+		E34E3D3C1A9B82990000C165 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		E36EDB111AC533B1007DACEE /* LPNSImageAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNSImageAnimator.h; sourceTree = "<group>"; };
+		E36EDB121AC533B1007DACEE /* LPNSImageAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNSImageAnimator.m; sourceTree = "<group>"; };
+		E36EDBDC1AC536EE007DACEE /* LPNSStatusItemIconAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNSStatusItemIconAnimator.h; sourceTree = "<group>"; };
+		E36EDBDD1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNSStatusItemIconAnimator.m; sourceTree = "<group>"; };
+		E36EDC651AC56424007DACEE /* TTOfflineChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTOfflineChecker.h; sourceTree = "<group>"; };
+		E36EDC661AC56424007DACEE /* TTOfflineChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTOfflineChecker.m; sourceTree = "<group>"; };
+		E3940A341AC30E22004802FC /* LPWallpaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWallpaper.h; sourceTree = "<group>"; };
+		E3940A351AC30E22004802FC /* LPWallpaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWallpaper.m; sourceTree = "<group>"; };
+		E3940A3B1AC32254004802FC /* LPUnsplashWallpaper+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LPUnsplashWallpaper+Properties.h"; sourceTree = "<group>"; };
+		E3940A3C1AC32254004802FC /* LPUnsplashWallpaper+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LPUnsplashWallpaper+Properties.m"; sourceTree = "<group>"; };
+		E3D12A2F1B62327C00466491 /* LPSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSettingsManager.h; sourceTree = "<group>"; };
+		E3D12A301B62327C00466491 /* LPSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSettingsManager.m; sourceTree = "<group>"; };
+		E3D12A321B62328500466491 /* LPSettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSettingsWindowController.h; sourceTree = "<group>"; };
+		E3D12A331B62328500466491 /* LPSettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSettingsWindowController.m; sourceTree = "<group>"; };
+		E3D12A341B62328500466491 /* LPSettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPSettingsWindowController.xib; sourceTree = "<group>"; };
+		E3D12A3D1B62495800466491 /* LPAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPAboutWindowController.h; sourceTree = "<group>"; };
+		E3D12A3E1B62495800466491 /* LPAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPAboutWindowController.m; sourceTree = "<group>"; };
+		E3D12A3F1B62495800466491 /* LPAboutWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LPAboutWindowController.xib; sourceTree = "<group>"; };
+		E3DBB5C31A7CEBFD008D9C64 /* Unsplash Wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unsplash Wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3DBB5C71A7CEBFD008D9C64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3DBB5C81A7CEBFD008D9C64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E3DBB5C91A7CEBFD008D9C64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E3DBB5CB1A7CEBFD008D9C64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3DBB5CD1A7CEBFD008D9C64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E3DBB5D01A7CEBFD008D9C64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E3DBB5E61A7CFD58008D9C64 /* LPUnsplashImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPUnsplashImageManager.h; sourceTree = "<group>"; };
+		E3DBB5E71A7CFD58008D9C64 /* LPUnsplashImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPUnsplashImageManager.m; sourceTree = "<group>"; };
+		E3DBB5E91A7D4A9D008D9C64 /* Unsplash Wallpaper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Unsplash Wallpaper.entitlements"; sourceTree = "<group>"; };
+		E3FF741F1B202EBF00A3725F /* LPWallpaperManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWallpaperManager.h; sourceTree = "<group>"; };
+		E3FF74201B202EBF00A3725F /* LPWallpaperManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWallpaperManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3DBB5C01A7CEBFD008D9C64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31ED8461AC30634001535DF /* CoreData.framework in Frameworks */,
+				9C00A9585A0292EC74279C9D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09C63C6621E3D8C0D3661E45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E31ED8451AC30634001535DF /* CoreData.framework */,
+				87582B5BEB2662FEEBCF4F4E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D1943B87658BB243F44EAB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE76CC94BBA04BC7EF281D51 /* Pods.debug.xcconfig */,
+				581346AF7673975526BBA2D8 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E39223E91B56A58A00B9C2FD /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E3380C911B2318BE00775AD5 /* NSImage+Luminance.h */,
+				E3380C921B2318BE00775AD5 /* NSImage+Luminance.m */,
+				E36EDC651AC56424007DACEE /* TTOfflineChecker.h */,
+				E36EDC661AC56424007DACEE /* TTOfflineChecker.m */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		E39223EA1B56A5AA00B9C2FD /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E33FA0171B45C0BE00DA10CF /* EnumsToStrings.h */,
+				E33FA0181B45C0BE00DA10CF /* EnumsToStrings.m */,
+				E3FF741F1B202EBF00A3725F /* LPWallpaperManager.h */,
+				E3FF74201B202EBF00A3725F /* LPWallpaperManager.m */,
+				E3DBB5E61A7CFD58008D9C64 /* LPUnsplashImageManager.h */,
+				E3DBB5E71A7CFD58008D9C64 /* LPUnsplashImageManager.m */,
+				E3D12A2F1B62327C00466491 /* LPSettingsManager.h */,
+				E3D12A301B62327C00466491 /* LPSettingsManager.m */,
+				E33FC6E81C0A01A6008EA317 /* UnsplashConstants.h */,
+				E33FC6E91C0A01DF008EA317 /* UnsplashConstants.m */,
+			);
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		E39223EB1B56A5C000B9C2FD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E36EDB111AC533B1007DACEE /* LPNSImageAnimator.h */,
+				E36EDB121AC533B1007DACEE /* LPNSImageAnimator.m */,
+				E36EDBDC1AC536EE007DACEE /* LPNSStatusItemIconAnimator.h */,
+				E36EDBDD1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m */,
+				E3D12A321B62328500466491 /* LPSettingsWindowController.h */,
+				E3D12A331B62328500466491 /* LPSettingsWindowController.m */,
+				E3D12A341B62328500466491 /* LPSettingsWindowController.xib */,
+				E3D12A3D1B62495800466491 /* LPAboutWindowController.h */,
+				E3D12A3E1B62495800466491 /* LPAboutWindowController.m */,
+				E3D12A3F1B62495800466491 /* LPAboutWindowController.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		E3940A3A1AC30E28004802FC /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3940A341AC30E22004802FC /* LPWallpaper.h */,
+				E3940A351AC30E22004802FC /* LPWallpaper.m */,
+				E3940A3B1AC32254004802FC /* LPUnsplashWallpaper+Properties.h */,
+				E3940A3C1AC32254004802FC /* LPUnsplashWallpaper+Properties.m */,
+				E32255591B7BF13500D47409 /* LPUnsplashWallpaper.h */,
+				E322555A1B7BF13500D47409 /* LPUnsplashWallpaper.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		E3DBB5BA1A7CEBFD008D9C64 = {
+			isa = PBXGroup;
+			children = (
+				E3DBB5C51A7CEBFD008D9C64 /* Unsplash Wallpaper */,
+				E3DBB5C41A7CEBFD008D9C64 /* Products */,
+				1D1943B87658BB243F44EAB1 /* Pods */,
+				09C63C6621E3D8C0D3661E45 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E3DBB5C41A7CEBFD008D9C64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB5C31A7CEBFD008D9C64 /* Unsplash Wallpaper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3DBB5C51A7CEBFD008D9C64 /* Unsplash Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				E3940A3A1AC30E28004802FC /* Core Data */,
+				E39223E91B56A58A00B9C2FD /* Commons */,
+				E39223EA1B56A5AA00B9C2FD /* Logic */,
+				E39223EB1B56A5C000B9C2FD /* UI */,
+				E3DBB5C81A7CEBFD008D9C64 /* AppDelegate.h */,
+				E3DBB5C91A7CEBFD008D9C64 /* AppDelegate.m */,
+				E3DBB5CF1A7CEBFD008D9C64 /* MainMenu.xib */,
+				E3DBB5CD1A7CEBFD008D9C64 /* Images.xcassets */,
+				E3DBB5C61A7CEBFD008D9C64 /* Supporting Files */,
+				E31ED8471AC3065A001535DF /* LPWallpapers.xcdatamodeld */,
+			);
+			path = "Unsplash Wallpaper";
+			sourceTree = "<group>";
+		};
+		E3DBB5C61A7CEBFD008D9C64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3DBB5E91A7D4A9D008D9C64 /* Unsplash Wallpaper.entitlements */,
+				E34E3D3C1A9B82990000C165 /* dsa_pub.pem */,
+				E3DBB5C71A7CEBFD008D9C64 /* Info.plist */,
+				E3DBB5CB1A7CEBFD008D9C64 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3DBB5C21A7CEBFD008D9C64 /* Unsplash Wallpaper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3DBB5E01A7CEBFD008D9C64 /* Build configuration list for PBXNativeTarget "Unsplash Wallpaper" */;
+			buildPhases = (
+				79CF4A0D1413487E98967AEC /* Check Pods Manifest.lock */,
+				E3DBB5BF1A7CEBFD008D9C64 /* Sources */,
+				E3DBB5C01A7CEBFD008D9C64 /* Frameworks */,
+				E3DBB5C11A7CEBFD008D9C64 /* Resources */,
+				BD85892A7879E320B8E24F0E /* Copy Pods Resources */,
+				029225F5DA578A3EE0517B5E /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Unsplash Wallpaper";
+			productName = "Unsplash Wallpaper";
+			productReference = E3DBB5C31A7CEBFD008D9C64 /* Unsplash Wallpaper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3DBB5BB1A7CEBFD008D9C64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Leonspok;
+				TargetAttributes = {
+					E3DBB5C21A7CEBFD008D9C64 = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 6KXZX3AW22;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E3DBB5BE1A7CEBFD008D9C64 /* Build configuration list for PBXProject "Unsplash Wallpaper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3DBB5BA1A7CEBFD008D9C64;
+			productRefGroup = E3DBB5C41A7CEBFD008D9C64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3DBB5C21A7CEBFD008D9C64 /* Unsplash Wallpaper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3DBB5C11A7CEBFD008D9C64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E34E3D3D1A9B82990000C165 /* dsa_pub.pem in Resources */,
+				E3D12A411B62495800466491 /* LPAboutWindowController.xib in Resources */,
+				E3DBB5CE1A7CEBFD008D9C64 /* Images.xcassets in Resources */,
+				E3D12A361B62328500466491 /* LPSettingsWindowController.xib in Resources */,
+				E3DBB5D11A7CEBFD008D9C64 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		029225F5DA578A3EE0517B5E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79CF4A0D1413487E98967AEC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD85892A7879E320B8E24F0E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3DBB5BF1A7CEBFD008D9C64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E33FC6EA1C0A02E3008EA317 /* UnsplashConstants.m in Sources */,
+				E36EDBDE1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m in Sources */,
+				E33FA0191B45C0BE00DA10CF /* EnumsToStrings.m in Sources */,
+				E322555B1B7BF13500D47409 /* LPUnsplashWallpaper.m in Sources */,
+				E3380C931B2318BE00775AD5 /* NSImage+Luminance.m in Sources */,
+				E36EDC671AC56424007DACEE /* TTOfflineChecker.m in Sources */,
+				E31ED8491AC3065A001535DF /* LPWallpapers.xcdatamodeld in Sources */,
+				E36EDB131AC533B1007DACEE /* LPNSImageAnimator.m in Sources */,
+				E3DBB5CC1A7CEBFD008D9C64 /* main.m in Sources */,
+				E3D12A401B62495800466491 /* LPAboutWindowController.m in Sources */,
+				E3D12A351B62328500466491 /* LPSettingsWindowController.m in Sources */,
+				E3940A3D1AC32254004802FC /* LPUnsplashWallpaper+Properties.m in Sources */,
+				E3FF74211B202EBF00A3725F /* LPWallpaperManager.m in Sources */,
+				E3940A361AC30E22004802FC /* LPWallpaper.m in Sources */,
+				E3D12A311B62327C00466491 /* LPSettingsManager.m in Sources */,
+				E3DBB5CA1A7CEBFD008D9C64 /* AppDelegate.m in Sources */,
+				E3DBB5E81A7CFD58008D9C64 /* LPUnsplashImageManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E3DBB5CF1A7CEBFD008D9C64 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3DBB5D01A7CEBFD008D9C64 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3DBB5DE1A7CEBFD008D9C64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E3DBB5DF1A7CEBFD008D9C64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E3DBB5E11A7CEBFD008D9C64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE76CC94BBA04BC7EF281D51 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Unsplash Wallpaper/Unsplash Wallpaper.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Unsplash Wallpaper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E3DBB5E21A7CEBFD008D9C64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 581346AF7673975526BBA2D8 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Unsplash Wallpaper/Unsplash Wallpaper.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Unsplash Wallpaper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3DBB5BE1A7CEBFD008D9C64 /* Build configuration list for PBXProject "Unsplash Wallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3DBB5DE1A7CEBFD008D9C64 /* Debug */,
+				E3DBB5DF1A7CEBFD008D9C64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3DBB5E01A7CEBFD008D9C64 /* Build configuration list for PBXNativeTarget "Unsplash Wallpaper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3DBB5E11A7CEBFD008D9C64 /* Debug */,
+				E3DBB5E21A7CEBFD008D9C64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E31ED8471AC3065A001535DF /* LPWallpapers.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E32255581B7BF0B000D47409 /* LPWallpapers 3.xcdatamodel */,
+				E308EC151B45795A0043E199 /* LPWallpapers 2.xcdatamodel */,
+				E31ED8481AC3065A001535DF /* LPWallpapers.xcdatamodel */,
+			);
+			currentVersion = E32255581B7BF0B000D47409 /* LPWallpapers 3.xcdatamodel */;
+			path = LPWallpapers.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E3DBB5BB1A7CEBFD008D9C64 /* Project object */;
+}

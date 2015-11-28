@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="addImageToBlackListItem" destination="wlf-JT-gKB" id="JuB-r3-RbD"/>
+                <outlet property="authorItem" destination="AM0-A1-ZL8" id="pOd-oJ-0tU"/>
+                <outlet property="availableImageLoads" destination="B5L-qY-6R6" id="jx2-7P-p0c"/>
+                <outlet property="changeAllWallpapersItem" destination="Nc4-IK-Rvy" id="9DU-yt-uyH"/>
+                <outlet property="collectionMenu" destination="vG8-mO-XYb" id="1kI-T9-w22"/>
+                <outlet property="loadStatusItem" destination="BDR-Bu-IAM" id="OYX-fh-GKf"/>
+                <outlet property="menu" destination="Olm-k1-jPS" id="C1E-x9-oN2"/>
+                <outlet property="nextImageItem" destination="OrA-O8-3NN" id="7eY-cQ-v4t"/>
+                <outlet property="recentWallpaperItem" destination="xpe-rI-gP0" id="tVm-0I-slI"/>
+                <outlet property="saveCurrentWallpaperItem" destination="gdx-AD-BBI" id="W83-XH-KYf"/>
+                <outlet property="updateIntervalMenu" destination="nqO-dH-q4a" id="J7p-3x-vvR"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="0Af-N7-i2Y" customClass="SUUpdater"/>
+        <menu id="Olm-k1-jPS">
+            <items>
+                <menuItem title="Updating index..." enabled="NO" id="BDR-Bu-IAM">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Author" id="AM0-A1-ZL8">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openAuthorProfile:" target="Voe-Tx-rLC" id="3tW-3f-LtK"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="jEt-BX-9g0"/>
+                <menuItem title="Change current wallpaper" keyEquivalent="n" id="OrA-O8-3NN">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="loadNextImage:" target="Voe-Tx-rLC" id="HYM-XA-ojX"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Change all wallpapers" keyEquivalent="m" id="Nc4-IK-Rvy">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="changeAllWallpapers:" target="Voe-Tx-rLC" id="pGx-UB-0bt"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Add wallpaper to blacklist" keyEquivalent="b" id="wlf-JT-gKB">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="addCurrentImageToBlackList:" target="Voe-Tx-rLC" id="7O0-vN-1WM"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="First in collection" keyEquivalent="r" id="xpe-rI-gP0">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="showRecentImage:" target="Voe-Tx-rLC" id="EpP-SR-WgS"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Save current wallpaper" keyEquivalent="s" id="gdx-AD-BBI">
+                    <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                    <connections>
+                        <action selector="saveCurrentImage:" target="Voe-Tx-rLC" id="Dza-hC-HuA"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="nSK-LR-HWi"/>
+                <menuItem title="You can change wallpaper" enabled="NO" id="6D4-Kp-8oQ">
+                    <attributedString key="attributedTitle"/>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="5 more times during this hour" enabled="NO" id="B5L-qY-6R6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="3qB-tD-4IB"/>
+                <menuItem title="Collection" id="gX1-GT-MyM" userLabel="Collection">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Collection" id="vG8-mO-XYb">
+                        <items>
+                            <menuItem title="Featured" id="8ZY-GM-0yS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setCollection:" target="Voe-Tx-rLC" id="S9h-sq-1a2"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="All" id="tuZ-HI-Hpm">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setCollection:" target="Voe-Tx-rLC" id="PhA-rQ-AdY"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Update interval" id="IGY-b9-HDX">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Update interval" autoenablesItems="NO" id="nqO-dH-q4a">
+                        <items>
+                            <menuItem title="Never" id="jdc-NB-26x">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="aeO-DY-9i4"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Every 3 hours" id="5Rh-WW-Gbv">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="vtS-bQ-W7Y"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Every 12 hours" id="7Ni-xz-h5v">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="8Bs-tn-PS5"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Every 24 hours" id="wil-ci-hWG">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="DjK-FC-h27"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Every week" id="hLs-WF-OkW">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="RPd-fr-g3b"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Every two weeks" id="LCv-vy-QxU">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="phI-iS-g05"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Every month" id="1wL-dR-6Pu">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="setUpdateDuration:" target="Voe-Tx-rLC" id="BZ0-Yn-NDg"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Clear blacklist" id="V13-mZ-jKt">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clearBlacklist:" target="Voe-Tx-rLC" id="gMk-Pr-jPu"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="2fa-5q-eWb"/>
+                <menuItem title="Settings" id="Wqa-2q-DKa">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="openSettings:" target="Voe-Tx-rLC" id="EO9-xv-dET"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About" id="SFO-TO-3ES">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAboutWindow:" target="Voe-Tx-rLC" id="gXN-As-H0a"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="aIa-fX-dDf"/>
+                <menuItem title="Hide menu bar icon" toolTip="To show it again, press launch Unsplash Wallpaper in Applications folder or in Launchpad" id="5ky-We-PAI">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="hideMenubarIcon:" target="Voe-Tx-rLC" id="7kS-uS-OL9"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" keyEquivalent="q" id="wDb-BH-kyz">
+                    <connections>
+                        <action selector="quit:" target="Voe-Tx-rLC" id="vKl-bR-i2w"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="238" y="389.5"/>
+        </menu>
+    </objects>
+</document>

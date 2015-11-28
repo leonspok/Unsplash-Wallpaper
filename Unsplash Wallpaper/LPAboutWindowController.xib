@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LPAboutWindowController">
+            <connections>
+                <outlet property="versionLabel" destination="Wom-N2-03i" id="9sS-SI-3od"/>
+                <outlet property="window" destination="60R-XW-O3U" id="WoH-wH-F93"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="documentWindow" id="60R-XW-O3U">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="196" y="207" width="351" height="233"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
+            <value key="minSize" type="size" width="351" height="198"/>
+            <value key="maxSize" type="size" width="351" height="198"/>
+            <view key="contentView" id="Fih-eu-Nje">
+                <rect key="frame" x="0.0" y="0.0" width="351" height="233"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="No7-QJ-7SD">
+                        <rect key="frame" x="125" y="113" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="NPl-Zq-Swj"/>
+                            <constraint firstAttribute="height" constant="100" id="igF-HG-9T4"/>
+                        </constraints>
+                        <animations/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="Rm6-We-vlk"/>
+                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TNc-LG-Nzk">
+                        <rect key="frame" x="75" y="81" width="200" height="24"/>
+                        <animations/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Unsplash Wallpaper" id="YES-aT-dDk">
+                            <font key="font" metaFont="systemBold" size="20"/>
+                            <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wom-N2-03i">
+                        <rect key="frame" x="176" y="53" width="31" height="16"/>
+                        <animations/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="1.0.9" id="Qgd-Vs-YKk">
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3i9-U0-OBe">
+                        <rect key="frame" x="121" y="53" width="53" height="17"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Version:" id="1lS-4w-YHd">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-kM-aN4">
+                        <rect key="frame" x="176" y="30" width="59" height="16"/>
+                        <animations/>
+                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" title="Leonspok" id="5RS-tY-afg">
+                            <font key="font" metaFont="cellTitle"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VfO-3C-Qc4">
+                        <rect key="frame" x="125" y="30" width="49" height="17"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Author:" id="CMm-ap-CyC">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VfO-3C-Qc4" firstAttribute="top" secondItem="3i9-U0-OBe" secondAttribute="bottom" constant="6" id="APd-g3-UiF"/>
+                    <constraint firstItem="2Y9-kM-aN4" firstAttribute="leading" secondItem="VfO-3C-Qc4" secondAttribute="trailing" constant="6" id="GRB-X9-8P4"/>
+                    <constraint firstItem="TNc-LG-Nzk" firstAttribute="top" secondItem="No7-QJ-7SD" secondAttribute="bottom" constant="8" id="O7g-UR-b6P"/>
+                    <constraint firstItem="Wom-N2-03i" firstAttribute="leading" secondItem="3i9-U0-OBe" secondAttribute="trailing" constant="6" id="RaI-oN-25r"/>
+                    <constraint firstItem="3i9-U0-OBe" firstAttribute="trailing" secondItem="TNc-LG-Nzk" secondAttribute="centerX" constant="-3" id="c3f-vF-ktn"/>
+                    <constraint firstItem="3i9-U0-OBe" firstAttribute="baseline" secondItem="Wom-N2-03i" secondAttribute="baseline" id="c6h-60-udp"/>
+                    <constraint firstItem="3i9-U0-OBe" firstAttribute="top" secondItem="TNc-LG-Nzk" secondAttribute="bottom" constant="11" id="ccv-PK-6A8"/>
+                    <constraint firstItem="VfO-3C-Qc4" firstAttribute="trailing" secondItem="3i9-U0-OBe" secondAttribute="trailing" id="gsW-YY-dd0"/>
+                    <constraint firstItem="No7-QJ-7SD" firstAttribute="top" secondItem="Fih-eu-Nje" secondAttribute="top" constant="20" id="m5u-qC-pVo"/>
+                    <constraint firstItem="TNc-LG-Nzk" firstAttribute="centerX" secondItem="No7-QJ-7SD" secondAttribute="centerX" id="pmL-FI-xNd"/>
+                    <constraint firstItem="VfO-3C-Qc4" firstAttribute="baseline" secondItem="2Y9-kM-aN4" secondAttribute="baseline" id="v5J-iE-hpK"/>
+                    <constraint firstAttribute="centerX" secondItem="No7-QJ-7SD" secondAttribute="centerX" constant="0.5" id="yv9-Gp-YXG"/>
+                </constraints>
+                <animations/>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="jSi-RM-dSZ"/>
+            </connections>
+            <point key="canvasLocation" x="323.5" y="369.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+    </resources>
+</document>

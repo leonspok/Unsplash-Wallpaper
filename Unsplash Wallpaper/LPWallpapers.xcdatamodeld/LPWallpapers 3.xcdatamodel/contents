@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="LPUnsplashWallpaper" representedClassName="LPUnsplashWallpaper" parentEntity="LPWallpaper" syncable="YES">
+        <attribute name="author" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="authorProfileName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="collection" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="pageInAllImages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pageInCuratedBatches" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="LPWallpaper" representedClassName="LPWallpaper" syncable="YES">
+        <attribute name="blacklisted" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="dateAdded" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="fullImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="mediumImageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LPUnsplashWallpaper" positionX="-27" positionY="81" width="128" height="120"/>
+        <element name="LPWallpaper" positionX="-63" positionY="-18" width="128" height="163"/>
+    </elements>
+</model>
