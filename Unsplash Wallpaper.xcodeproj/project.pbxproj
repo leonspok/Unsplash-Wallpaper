@@ -14,7 +14,6 @@
 		E3380C931B2318BE00775AD5 /* NSImage+Luminance.m in Sources */ = {isa = PBXBuildFile; fileRef = E3380C921B2318BE00775AD5 /* NSImage+Luminance.m */; };
 		E33FA0191B45C0BE00DA10CF /* EnumsToStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = E33FA0181B45C0BE00DA10CF /* EnumsToStrings.m */; };
 		E33FC6EA1C0A02E3008EA317 /* UnsplashConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E33FC6E91C0A01DF008EA317 /* UnsplashConstants.m */; };
-		E34E3D3D1A9B82990000C165 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = E34E3D3C1A9B82990000C165 /* dsa_pub.pem */; };
 		E36EDB131AC533B1007DACEE /* LPNSImageAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E36EDB121AC533B1007DACEE /* LPNSImageAnimator.m */; };
 		E36EDBDE1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = E36EDBDD1AC536EE007DACEE /* LPNSStatusItemIconAnimator.m */; };
 		E36EDC671AC56424007DACEE /* TTOfflineChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = E36EDC661AC56424007DACEE /* TTOfflineChecker.m */; };
@@ -49,7 +48,6 @@
 		E33FA0181B45C0BE00DA10CF /* EnumsToStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumsToStrings.m; sourceTree = "<group>"; };
 		E33FC6E81C0A01A6008EA317 /* UnsplashConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnsplashConstants.h; sourceTree = "<group>"; };
 		E33FC6E91C0A01DF008EA317 /* UnsplashConstants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnsplashConstants.m; sourceTree = "<group>"; };
-		E34E3D3C1A9B82990000C165 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		E36EDB111AC533B1007DACEE /* LPNSImageAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNSImageAnimator.h; sourceTree = "<group>"; };
 		E36EDB121AC533B1007DACEE /* LPNSImageAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPNSImageAnimator.m; sourceTree = "<group>"; };
 		E36EDBDC1AC536EE007DACEE /* LPNSStatusItemIconAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPNSStatusItemIconAnimator.h; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				E3DBB5E91A7D4A9D008D9C64 /* Unsplash Wallpaper.entitlements */,
-				E34E3D3C1A9B82990000C165 /* dsa_pub.pem */,
 				E3DBB5C71A7CEBFD008D9C64 /* Info.plist */,
 				E3DBB5CB1A7CEBFD008D9C64 /* main.m */,
 			);
@@ -283,7 +280,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E34E3D3D1A9B82990000C165 /* dsa_pub.pem in Resources */,
 				E3D12A411B62495800466491 /* LPAboutWindowController.xib in Resources */,
 				E3DBB5CE1A7CEBFD008D9C64 /* Images.xcassets in Resources */,
 				E3D12A361B62328500466491 /* LPSettingsWindowController.xib in Resources */,
