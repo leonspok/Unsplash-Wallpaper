@@ -4,8 +4,6 @@ Unsplash Wallpaper changes your desktop wallpaper to one of thousands stunning p
 
 It's an old version of [Irvue](http://irvue.tumblr.com). I will not support it anymore, but this version contains some features, which can not be implemented in the Mac App Store version. So I made code of the last Unsplash Wallpaper version open for everyone.
 
-Download Unsplash Wallpaper [here](https://github.com/leonspok/Unsplash-Wallpaper/releases).
-
 ## Requirements
 
 * OS X 10.9+
